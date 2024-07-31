@@ -16,7 +16,7 @@ def get_completion_from_messages(system_message, user_message, model="gpt-4o", t
         {'role': 'user', 'content': f"{user_message}"}
     ]
     
-    response = openai.ChatCompletion.create(
+    response = openai.Chat.create(
         engine=model,
         messages=messages,
         temperature=temperature, 

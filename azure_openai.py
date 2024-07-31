@@ -5,7 +5,7 @@ import openai
 load_dotenv()
 
 openai.api_type = "azure"
-openai.api_base = https://apolloai.openai.azure.com/
+openai.api_base = os.getenv("AZURE_OPENAI_ENDPOINT")
 openai.api_version = "2024-05-13"
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
